@@ -24,3 +24,4 @@ class AddForApproval extends \Magento\Framework\Model\ResourceModel\Db\AbstractD
         $this->_init('sourabh_customer_pending_approval', 'id');
     }
 }
+?>
