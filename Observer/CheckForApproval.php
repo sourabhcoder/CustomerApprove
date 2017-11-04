@@ -1,4 +1,5 @@
 <?php
+
 namespace Sourabh\CustomerApprove\Observer;
 
 class CheckForApproval implements \Magento\Framework\Event\ObserverInterface
@@ -63,3 +64,4 @@ class CheckForApproval implements \Magento\Framework\Event\ObserverInterface
      return $this;
   }
 }
+?>
