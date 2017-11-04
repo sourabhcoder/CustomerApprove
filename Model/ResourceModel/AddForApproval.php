@@ -2,8 +2,6 @@
 
 namespace Sourabh\CustomerApprove\Model\ResourceModel;
 
-
-
 class AddForApproval extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
 
