@@ -1,8 +1,5 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+
 namespace Sourabh\CustomerApprove\Block\Adminhtml\Customer\Edit;
 
 use Magento\Customer\Api\AccountManagementInterface;
