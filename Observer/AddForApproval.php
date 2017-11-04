@@ -1,4 +1,5 @@
 <?php
+
 namespace Sourabh\CustomerApprove\Observer;
 
 class AddForApproval implements \Magento\Framework\Event\ObserverInterface
@@ -20,3 +21,4 @@ class AddForApproval implements \Magento\Framework\Event\ObserverInterface
      return $this;
   }
 }
+?>
