@@ -1,31 +1,33 @@
 <?php
-
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
 namespace Sourabh\CustomerApprove\Observer;
 
 class CheckForApproval implements \Magento\Framework\Event\ObserverInterface
 {
     /**
      *
-     * @var type 
+     * @var type
      */
     protected $addForApproval;
     /**
      *
-     * @var type 
+     * @var type
      */
     protected $messageManagerInterface;
     /**
      *
-     * @var type 
+     * @var type
      */
     protected $httpResponse;
     /**
      *
-     * @var type 
+     * @var type
      */
     protected $customerSession;
     /**
-     * 
+     *
      * @param \Sourabh\CustomerApprove\Model\AddForApprovalFactory $addForApproval
      * @param \Magento\Framework\Message\ManagerInterface $messageManagerInterface
      * @param \Magento\Framework\App\Response\Http $httpResponse
@@ -46,7 +48,7 @@ class CheckForApproval implements \Magento\Framework\Event\ObserverInterface
 
   public function execute(\Magento\Framework\Event\Observer $observer)
   {
-     $addForApproval = $this->addForApproval->create()->load($observer->getEvent()->getCustomer()->getId(),'customer_id'); 
+     $addForApproval = $this->addForApproval->create()->load($observer->getEvent()->getCustomer()->getId(),'customer_id');
      if (empty($addForApproval)) // if empty means the customer was approved, that is if the record is not found in the table
      {
          return $this;
@@ -56,12 +58,11 @@ class CheckForApproval implements \Magento\Framework\Event\ObserverInterface
          if ($addForApproval->getIsApproved() == 0)
          {
              if($this->customerSession->isLoggedIn()) {
-                 $this->customerSession->logout();                              
+                 $this->customerSession->logout();
              }
-             $this->messageManagerInterface->addWarningMessage("Account awaiting approval from admin.");      
+             $this->messageManagerInterface->addWarningMessage("Account awaiting approval from admin.");
          }
      }
      return $this;
   }
 }
-?>

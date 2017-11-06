@@ -1,6 +1,7 @@
 <?php
-
-
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
 namespace Sourabh\CustomerApprove\Controller\Adminhtml\CustomerApprove;
 
 use Magento\Backend\App\Action;
@@ -13,9 +14,9 @@ class Index extends \Magento\Backend\App\Action
      * @var PageFactory
      */
     protected $resultPageFactory;
-    
+
     protected $addForApproval;
-    
+
     protected $httpResponse;
     public function __construct(
         Context $context,
@@ -26,7 +27,7 @@ class Index extends \Magento\Backend\App\Action
         parent::__construct($context);
         $this->addForApproval = $addForApproval;
         $this->httpResponse   = $httpResponse;
-       
+
     }
 
     /**
@@ -37,7 +38,7 @@ class Index extends \Magento\Backend\App\Action
     {
         $customerId = $this->_request->getParam('customerid');
         $changeTo   = $this->_request->getParam('changeto');
-        
+
         $addForApprovalData = $this->addForApproval->create()->load($customerId,'customer_id');
         if(empty($addForApprovalData->getData())) // if the record does not exists in the database
         {

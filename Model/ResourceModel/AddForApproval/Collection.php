@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
 namespace Sourabh\CustomerApprove\Model\ResourceModel\AddForApproval;
 
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection

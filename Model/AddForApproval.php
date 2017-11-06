@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
 namespace Sourabh\CustomerApprove\Model;
 
 class AddForApproval extends \Magento\Framework\Model\AbstractModel

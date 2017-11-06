@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!--
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
+-->
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
-    
+
     <settings>
         <buttons>
             <button name="newback" class="Sourabh\CustomerApprove\Block\Adminhtml\Customer\Edit\ApproveButton"/>
         </buttons>
     </settings>
-   
+
 </form>

@@ -1,12 +1,14 @@
 <?php
-
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
 namespace Sourabh\CustomerApprove\Model\ResourceModel;
 
 class AddForApproval extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
 
     /**
-     * 
+     *
      * @param \Magento\Framework\Model\ResourceModel\Db\Context $context
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfigInterface
      */
@@ -24,4 +26,3 @@ class AddForApproval extends \Magento\Framework\Model\ResourceModel\Db\AbstractD
         $this->_init('sourabh_customer_pending_approval', 'id');
     }
 }
-?>

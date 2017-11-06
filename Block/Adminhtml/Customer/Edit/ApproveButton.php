@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
 namespace Sourabh\CustomerApprove\Block\Adminhtml\Customer\Edit;
 
 use Magento\Customer\Api\AccountManagementInterface;
@@ -17,11 +19,11 @@ class ApproveButton extends \Magento\Customer\Block\Adminhtml\Edit\GenericButton
     protected $customerAccountManagement;
     /**
      *
-     * @var type 
+     * @var \Sourabh\CustomerApprove\Model\AddForApprovalFactory
      */
     protected $addForApproval;
     /**
-     * 
+     *
      * @param \Magento\Backend\Block\Widget\Context $context
      * @param \Magento\Framework\Registry $registry
      * @param AccountManagementInterface $customerAccountManagement
@@ -44,7 +46,7 @@ class ApproveButton extends \Magento\Customer\Block\Adminhtml\Edit\GenericButton
     public function getButtonData()
     {
         $customerId = $this->getCustomerId();
-        $checkForApproval = $this->addForApproval->create()->load($customerId,'customer_id'); 
+        $checkForApproval = $this->addForApproval->create()->load($customerId,'customer_id');
         $displayTextBtn = 'Disapprove Customer'; // if record does not exists in the database then the customer is an approved customer
         $changeTo = 0; // by default if the record does not exists in the record then it is approved by default, so by default in disapprove is in the value
         if (empty($checkForApproval->getData())) // if empty means the customer was approved, that is if the record is not found in the table

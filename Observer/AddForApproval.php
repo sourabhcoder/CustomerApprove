@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
 namespace Sourabh\CustomerApprove\Observer;
 
 class AddForApproval implements \Magento\Framework\Event\ObserverInterface
@@ -13,7 +15,7 @@ class AddForApproval implements \Magento\Framework\Event\ObserverInterface
 
   public function execute(\Magento\Framework\Event\Observer $observer)
   {
-     $addForApproval = $this->addForApproval->create(); 
+     $addForApproval = $this->addForApproval->create();
      $customerId = $observer->getEvent()->getCustomer()->getId();
      $addForApproval->setCustomerId($customerId);
      $addForApproval->setIsApproved(0);
@@ -21,4 +23,3 @@ class AddForApproval implements \Magento\Framework\Event\ObserverInterface
      return $this;
   }
 }
-?>
