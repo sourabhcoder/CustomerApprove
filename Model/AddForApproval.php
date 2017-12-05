@@ -12,4 +12,3 @@ class AddForApproval extends \Magento\Framework\Model\AbstractModel
         $this->_init('Sourabh\CustomerApprove\Model\ResourceModel\AddForApproval');
     }
 }
-?>
